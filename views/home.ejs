@@ -1,0 +1,93 @@
+<%- include('./header.ejs') %>
+
+  <!--banner starts-->
+    <!--slider div start-->
+    <div class="carousel slide" data-bs-ride="carousel" id="a" >
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#a" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#a" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#a" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+
+                <img src="image/1.jpg" class="w-100 banner">
+                <div class="carousel-caption">
+                </div><!--carousel-caption-->
+            </div>0
+            <div class="carousel-item" data-bs-interval="2000">
+
+                <img src="image/11.jpg" class="w-100 banner" alt="...">
+                <div class="carousel-caption">
+                </div><!--carousel-caption-->
+            </div>1
+            <div class="carousel-item" data-bs-interval="2000">
+
+                <img src="image/32.jpg" class="w-100 banner " alt="...">
+                <div class="carousel-caption">
+                </div><!--carousel-caption-->
+            </div>2
+        </div><!--carousel-inner-->
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#a" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#a" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    <!--slider div end-->
+    <div class="container-fluid">
+        <div class="container">
+            <h2 class="text-center a"> Welcome to <b style="color: #fbaa1a;">S&S Blog Tech</b></h2>
+            <br>
+            <div class="row">
+                <div class="col-md-7">
+                    <p class="b">Blog Tech Company, one of India’s most prominent S&S companies in the casual
+                        dining sector, is headed by Shivam Singh. Starting the journey from Lazeez Affair in 2018 to
+                        Miso Sexy and Bougie in 2022, we have created wave after wave in the industry with over 30+
+                        Brand Blog, brands, and franchises across India.</p>
+                    
+                        <button class="btn btn-warning shadow-lg mb-3 text-white">Read More...</button>
+                    
+                </div>
+                <div class="col-md-5 text-center">
+                    <img src="image/21.jpg" class="img123 shadow-lg">
+                </div>
+            </div><!--row ends-->
+
+        </div><!--container ends-->
+
+    </div><!--container fluid end-->
+
+    <div class="container-fluid mt-5">
+        <div class="container">
+             <h2 class="text-center  a mb-3"> Recent Blogs <b style="color: #fbaa1a;">S&S Blog Tech</b></h2>
+            
+           
+
+           
+             <div class="row">
+
+
+                <% b.forEach((item)=>{ %>
+                <div class="col-md-4">
+                    <div class="card">
+                       <img src="<%= item.image.url %>" class="w-100" style="height: 180px;"> 
+                        <h2 class="text-xl font-medium mb-2 text-danger">&nbsp;<%= item.title %></h2>
+                       <p style="text-align: justify;padding: 10px 10px;"><%= item.description.slice(0,100) %>..</p> 
+                       <button class="btn btn-warning text-white " style="width:120px;margin-left: 8px;"><a href="/blogdetail/<%= item._id %>" style="text-decoration: none;font-size: 15px;color:white;">Read More..</a></button>   
+                    <p><b>&nbsp;&nbsp;Posted date</b> <span><%= item.createdAt.toLocaleDateString() %></span></p>
+                    
+                </div>
+                </div>
+                <% }) %>
+            </div>
+            
+            
+        </div>
+    </div>
+
+<%- include('./footer.ejs') %>

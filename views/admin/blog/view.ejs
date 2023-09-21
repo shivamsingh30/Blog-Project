@@ -1,0 +1,109 @@
+<%- include('../../header.ejs') %>
+    <div class="container-fluid" style="margin-top: 100px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <table style="border:1px solid white;width: 200px;background: grey;color:white;cursor: pointer;"
+                        class="alpha">
+                        <tr>
+                            <th class="alpha"><a href="/admin/dashboard" class="alpha"
+                                    style="text-decoration: none;color:white;font-size: 18px;padding-left: 5px;">Dashboard</a>
+                            </th>
+
+                        </tr>
+                    </table>
+                    <table style="border:1px solid white;width: 200px;background: grey;color:white;cursor: pointer;"
+                        class="mt-2 alpha">
+                        <tr style="border:1px solid white;">
+                            <th class="alpha"><a href="/admin/blogdisplay" class="alpha"
+                                    style="text-decoration: none;color:white;font-size: 18px;padding-left: 5px;">Display
+                                    Blog</a></th>
+
+                        </tr>
+                    </table>
+                    <table style="border:1px solid white;width: 200px;background: grey;color:white;cursor:pointer"
+                        class="mt-2 alpha">
+                        <tr style="border:1px solid white;">
+                            <th class="alpha"><a href="/admin/category/display" class="alpha"
+                                    style="text-decoration: none;color:white;font-size: 18px;padding-left: 5px;">Categories</a>
+                            </th>
+
+                        </tr>
+                    </table>
+
+                    <table style="border:1px solid white;width: 200px;background: grey;color:white;cursor: pointer;"
+                        class="mt-2 alpha">
+                        <tr style="border:1px solid white;">
+                            <th class="alpha"><a href="/admin/contact/display" class="alpha"
+                                    style="text-decoration: none;color:white;font-size: 18px;padding-left: 5px;">Contact</a>
+                            </th>
+
+                        </tr>
+                    </table>
+
+                    <table style="border:1px solid white;width: 200px;background: grey;color:white;cursor:pointer"
+                        class="mt-2 alpha">
+                        <tr style="border:1px solid white;">
+                            <th class="alpha"><a href="/admin/about/display" class="alpha"
+                                    style="text-decoration: none;color:white;font-size: 18px;padding-left: 5px;">About</a>
+                            </th>
+
+                        </tr>
+                    </table>
+                    <table style="border:1px solid white;width: 200px;background: grey;color:white;cursor:pointer"
+                        class="mt-2 alpha">
+                        <tr style="border:1px solid white;">
+                            <th class="alpha"><a href="" class="alpha"
+                                    style="text-decoration: none;color:white;font-size: 18px;padding-left: 5px;">Logout</a>
+                            </th>
+
+                        </tr>
+
+                    </table>
+                </div>
+                <div class="col-md-9">
+                    
+                    <h2> View Blog </h2>
+                    <table style="border:1px solid black;width:800px;">
+                        <tr style="border:1px solid black">
+                            <th style="border:1px solid black">Id</th>
+                           
+                            <th style="border:1px solid black">Title</th>
+                            <th style="border:1px solid black">Description</th>
+                           
+                            
+                        </tr>
+                        
+
+                            <tr style="border:1px solid black">
+                                <th style="border:1px solid black"><%= view._id %></th>
+                                
+                                <th style="border:1px solid black"><%= view.title %></th>
+                                <th style="border:1px solid black"><%= view.description %></th>
+                                
+                                
+                            </tr>
+
+                           
+
+                            
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="container-fluid bg-secondary " style="margin-top: 240px;">
+        <div class="container">
+            <div class="row">
+                <h2 class="text-white text-center">Thank You for reading!</h2>
+                <h4 class="text-white text-center">if you enjoyed this post.please feel free to share it.</h4>
+            </div>
+        </div>
+    </div>
+
+
+   
+
+    <%- include('../../footer.ejs') %>

@@ -1,0 +1,139 @@
+<%- include('../../header.ejs') %>
+    <div class="container-fluid" style="margin-top: 100px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <table style="border:1px solid white;width: 200px;background: grey;color:white;cursor: pointer;"
+                        class="alpha">
+                        <tr>
+                            <td class="alpha"><a href="/admin/dashboard" class="alpha"
+                                    style="text-decoration: none;color:white;font-size: 18px;padding-left: 5px;">Dashboard</a>
+                            </td>
+
+                        </tr>
+                    </table>
+                    <table style="border:1px solid white;width: 200px;background: grey;color:white;cursor: pointer;"
+                        class="mt-2 alpha">
+                        <tr style="border:1px solid white;">
+                            <td class="alpha"><a href="/admin/blogdisplay" class="alpha"
+                                    style="text-decoration: none;color:white;font-size: 18px;padding-left: 5px;">Display
+                                    Blog</a></td>
+
+                        </tr>
+                    </table>
+                    <table style="border:1px solid white;width: 200px;background: grey;color:white;cursor:pointer"
+                        class="mt-2 alpha">
+                        <tr style="border:1px solid white;">
+                            <td class="alpha"><a href="/admin/category/display" class="alpha"
+                                    style="text-decoration: none;color:white;font-size: 18px;padding-left: 5px;">Categories</a>
+                            </td>
+
+                        </tr>
+                    </table>
+
+                    <table style="border:1px solid white;width: 200px;background: grey;color:white;cursor: pointer;"
+                        class="mt-2 alpha">
+                        <tr style="border:1px solid white;">
+                            <td class="alpha"><a href="/admin/contact/display" class="alpha"
+                                    style="text-decoration: none;color:white;font-size: 18px;padding-left: 5px;">Contact</a>
+                            </td>
+
+                        </tr>
+                    </table>
+
+                    <table style="border:1px solid white;width: 200px;background: grey;color:white;cursor:pointer"
+                        class="mt-2 alpha">
+                        <tr style="border:1px solid white;">
+                            <td class="alpha"><a href="/admin/about/display" class="alpha"
+                                    style="text-decoration: none;color:white;font-size: 18px;padding-left: 5px;">About</a>
+                            </td>
+
+                        </tr>
+                    </table>
+                    <table style="border:1px solid white;width: 200px;background: grey;color:white;cursor:pointer"
+                        class="mt-2 alpha">
+                        <tr style="border:1px solid white;">
+                            <td class="alpha"><a href="/login" class="alpha"
+                                    style="text-decoration: none;color:white;font-size: 18px;padding-left: 5px;">Logout</a>
+                            </td>
+
+                        </tr>
+
+                    </table>
+                </div>
+                <div class="col-md-9">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Add Category
+                    </button><br><hr>
+                    <h2>Category List</h2>
+                    <table style="border:1px solid black;width:800px;">
+                        <tr style="border:1px solid black">
+                            <th style="border:1px solid black">Id</th>
+                            <th style="border:1px solid black">Image</th>
+                            <th style="border:1px solid black">Title</th>
+                            <th style="border:1px solid black">Description</th>
+                            <th style="border:1px solid black">Posted On</th>
+                            <th style="border:1px solid black">Action</th>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">1</td>
+                            <td style="border:1px solid black">sh.png</td>
+                            <td style="border:1px solid black">pollution</td>
+                            <td style="border:1px solid black">this is verry hazard problem...</td>
+                            <td style="border:1px solid black">24/04/23</td>
+                            <td style="border:1px solid black">
+                                <a href="" class="btn btn-info">View</a>
+                                <a href="" class="btn btn-success">Edit</a>
+                                <a href="" class="btn btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="container-fluid bg-secondary " style="margin-top: 240px;">
+        <div class="container">
+            <div class="row">
+                <h2 class="text-white text-center">Thank You for reading!</h2>
+                <h4 class="text-white text-center">if you enjoyed this post.please feel free to share it.</h4>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- modal blog add -->
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Category</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="mb-3">
+                            <label for="">Title</label>
+                            <input type="text" name="title" class="form-control">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Discription</label>
+                            <textarea type="text" name="title" class="form-control"></textarea>
+
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <%- include('../../footer.ejs') %>

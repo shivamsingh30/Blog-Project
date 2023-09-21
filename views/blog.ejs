@@ -1,0 +1,33 @@
+<%- include('./header.ejs') %>
+
+<div class="container-fluid mt-5" style="padding-top: 40px;">
+    <div class="container">
+         <h2 class="text-center  a mb-3"> All Blogs <b style="color: #fbaa1a;">S&S Blog Tech</b></h2>
+        
+       
+
+       
+         <div class="row">
+
+
+            <% b.forEach((item)=>{ %>
+            <div class="col-md-4">
+                <div class="card">
+                   <img src="<%= item.image.url %>" style="height: 180px;"> 
+                    <h2 class="text-xl font-medium mb-2 text-danger">&nbsp;<%= item.title %></h2>
+                   <p style="text-align: justify;padding: 10px 10px;"><%= item.description.slice(0,100) %>..</p> 
+                   <button class="btn btn-warning text-white " style="width:120px;margin-left: 8px;"><a href="/blogdetail/<%= item._id %>" style="text-decoration: none;font-size: 15px;color:white;">Read More..</a></button>   
+                <p><b>&nbsp;&nbsp;Posted date</b> <span><%= item.createdAt.toLocaleDateString() %></span></p>
+                
+            </div>
+            </div>
+            <% }) %>
+        </div>
+        
+        
+    </div>
+</div>
+
+        
+
+<%- include('./footer.ejs') %>

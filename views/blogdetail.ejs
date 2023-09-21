@@ -1,0 +1,53 @@
+<%- include('./header.ejs') %>
+
+  <!--banner starts-->
+   
+
+    <div class="container-fluid mt-5">
+        <div class="container">
+             <h2 class="text-center  a " style="padding-top: 50px;"> Read Complete Blog <b style="color: #fbaa1a;">S&S Blog Tech</b></h2>
+            
+           
+
+           
+             <div class="row">
+
+
+                
+                <div class="col-md-7">
+                    <div class="card">
+                        <h2 style="color:orange;">&nbsp;<%= d.title %></h2>
+                        <p><b>&nbsp;&nbsp;Posted On</b> <span><%= d.createdAt.toLocaleDateString() %></span></p>
+                       <img src="<%= d.image.url %>" class="w-100" style="height: 250px;"> 
+                        
+                       <p style="text-align: justify;padding: 10px 10px;"><%= d.description %></p> 
+                         
+                  
+                    
+                </div>
+
+                </div>
+                <div class="col-md-5" style="align-items: center;padding-left: 120px;padding-top: 40px;">
+                    <table style="background: silver;width:250px;" >
+                        <tr style="background: yellow;">
+                            <th colspan="2" ><h2 class="text-danger">Recent Blog</h2> </th>
+                        </tr> 
+                        <% r.forEach((recentitem)=>{ %>
+                        <tr>
+                            <th><img src="<%= recentitem.image.url %>" style="width: 50px;" alt=""></th>
+                            <th><b><%= recentitem.title %></b>
+                            <p><%= recentitem.createdAt.toLocaleDateString() %></p>
+                            </th>
+                        </tr>
+                        <% }) %>
+                        
+                    </table>
+                </div>
+                
+            </div>
+            
+            
+        </div>
+    </div>
+
+<%- include('./footer.ejs') %>
